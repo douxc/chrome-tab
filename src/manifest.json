@@ -1,0 +1,24 @@
+{
+  "name": "tab",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "chrome extension",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "webRequest",
+    "history"
+  ],
+  "requirements": {
+    "3D": {
+      "features": [
+        "css3d",
+        "webgl"
+      ]
+    }
+  },
+  "chrome_url_overrides": {
+    "newtab": "newTab.html"
+  }
+}

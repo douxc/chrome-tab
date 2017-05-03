@@ -1,0 +1,32 @@
+.website {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.website__item {
+    width: 24%;
+    height: 10rem;
+    margin: 1rem;
+    border: 1px solid #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 1rem 2px rgba(0, 0, 0, 0.05);
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.website__item:hover {
+    animation: itemHover 150ms linear forwards;
+}
+
+@keyframes itemHover {
+    to {
+        box-shadow: 0 0 1rem 2px rgba(0, 0, 0, 0.1);
+    }
+}

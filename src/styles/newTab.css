@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f7f7f7;
+    font-size: 18px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #4f9bff;
+}
+
+a:active {
+    color: #3e8cff;
+}
+
+/*主区域*/
+.content {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/*文字超出，自动截断*/
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

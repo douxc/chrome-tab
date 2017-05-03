@@ -1,0 +1,41 @@
+.history {
+
+}
+
+/*历史记录项*/
+.history_item {
+    list-style: none;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+
+.history_item:last-of-type {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.history_item:nth-of-type(2n) {
+    background-color: #fff;
+}
+
+/*标题*/
+.history_item__title {
+    padding: 0 1rem;
+    flex: 2;
+}
+
+/*时间*/
+.history_item__time {
+    padding: 0 1rem;
+    flex: 2;
+}
+
+/*地址*/
+.history_item__url {
+    padding-right: 1rem;
+    flex: 5;
+}

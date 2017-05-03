@@ -4,7 +4,7 @@
   "description": "new chrome tab",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack --config webpack.config.js --env.production -w"
+    "webpack": "webpack --config webpack.config.js --env.production"
   },
   "keywords": [
     "chrome",

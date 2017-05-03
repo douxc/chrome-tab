@@ -43,15 +43,22 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             minChunks: function (module, count) {
+                var resource = module.resource;
                 // any required modules inside node_modules are extracted to vendor
                 return (
-                    module.resource &&
-                    /\.js$/.test(module.resource) &&
-                    module.resource.indexOf(
-                        path.join(__dirname, '../node_modules')
+                    resource &&
+                    /\.js$/.test(resource) &&
+                    resource.indexOf(
+                        path.join(__dirname, './node_modules')
                     ) === 0
                 )
             }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            },
+            sourceMap: false
         }),
         new HtmlWebpackPlugin({
             filename: 'newTab.html',

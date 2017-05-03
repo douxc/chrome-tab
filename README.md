@@ -1,0 +1,13 @@
+# chrome-tab
+
+chrome扩展，自定义新打开的标签页
+
+## TODO
+
+0. 管理最近浏览记录
+0. 设置常用网址
+0. 统计常用网站使用次数
+
+## 截图
+
+![capture](./capture/capture.png)

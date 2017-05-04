@@ -16,17 +16,13 @@
     align-items: center;
     background-color: #fff;
     border-radius: 2px;
-    box-shadow: 0 0 1rem 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 1rem 2px rgba(0, 0, 0, 0.1);
     word-break: break-all;
     overflow: hidden;
+    transition: box-shadow 150ms ease-out;
 }
 
 .website__item:hover {
-    animation: itemHover 150ms linear forwards;
-}
-
-@keyframes itemHover {
-    to {
-        box-shadow: 0 0 1rem 2px rgba(0, 0, 0, 0.1);
-    }
+    box-shadow: 0 0 1rem 2px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 150ms ease-out;
 }

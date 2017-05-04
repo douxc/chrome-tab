@@ -14,5 +14,12 @@ new Vue({
     store,
     render: function (h) {
         return <App></App>;
+    },
+    mounted() {
+        const _this = this;
+        const state = window.localStorage.getItem('state');
+        if (state && state.length > 0) {
+            _this.$store.replaceState(JSON.parse(state));
+        }
     }
 });

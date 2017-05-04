@@ -129,21 +129,23 @@ a:active {
     align-items: center;
     background-color: #fff;
     border-radius: 2px;
-    box-shadow: 0 0 1rem 2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 1rem 2px rgba(0, 0, 0, 0.1);
     word-break: break-all;
     overflow: hidden;
+    transition: box-shadow 150ms ease-out;
 }
 
 .website__item:hover {
-    animation: itemHover 150ms linear forwards;
+    box-shadow: 0 0 1rem 2px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 150ms ease-out;
+}.history-container {
+    padding: 1rem;
 }
 
-@keyframes itemHover {
-    to {
-        box-shadow: 0 0 1rem 2px rgba(0, 0, 0, 0.1);
-    }
-}.history {
-
+/*历史列表*/
+.history {
+    padding: 0;
+    margin: 0;
 }
 
 /*历史记录项*/
@@ -158,10 +160,12 @@ a:active {
     border-right: 1px solid #e5e5e5;
 }
 
+/*最后一个项的底部边框*/
 .history_item:last-of-type {
     border-bottom: 1px solid #e5e5e5;
 }
 
+/*斑马色*/
 .history_item:nth-of-type(2n) {
     background-color: #fff;
 }
@@ -182,4 +186,37 @@ a:active {
 .history_item__url {
     padding-right: 1rem;
     flex: 5;
+}
+
+/*删除按钮*/
+.history_item__delete {
+    margin-right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+    cursor: pointer;
+}
+
+/*列表底部*/
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+
+.footer__count {
+    justify-content: flex-start;
+    margin: 1rem;
+    color: #888888;
+    font-size: smaller;
+}
+
+/*删除全部按钮*/
+.footer__deleteAll {
+    color: #666666;
 }

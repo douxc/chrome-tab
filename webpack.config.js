@@ -11,6 +11,7 @@ module.exports = {
     entry: './src/components/index',
     output: {
         path: path.join(__dirname, './dist'),
+        publicPath: "../",
         filename: 'components/[name].js'
     },
     module: {
@@ -31,6 +32,14 @@ module.exports = {
                     //resolve-url-loader may be chained before sass-loader if necessary
                     use: ['css-loader']
                 })
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    name: 'assets/[name].[ext]'
+                }
             }]
     },
     plugins: [

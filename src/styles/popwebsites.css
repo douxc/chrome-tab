@@ -9,7 +9,7 @@
 .website__item {
     width: 24%;
     height: 10rem;
-    margin: 1rem;
+    margin-bottom: 1rem;
     border: 1px solid #f7f7f7;
     display: flex;
     justify-content: center;

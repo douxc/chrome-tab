@@ -2,11 +2,18 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
 body {
     padding: 0;
     margin: 0;
-    background-color: #f7f7f7;
     font-size: 18px;
+    background-image: repeating-linear-gradient(30deg, transparent, transparent 1rem, #fbfbfb 1rem, #fff 2rem);
+    color: #333;
 }
 
 a {

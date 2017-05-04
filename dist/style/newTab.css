@@ -2,11 +2,18 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
 body {
     padding: 0;
     margin: 0;
-    background-color: #f7f7f7;
     font-size: 18px;
+    background-image: repeating-linear-gradient(30deg, transparent, transparent 1rem, #fbfbfb 1rem, #fff 2rem);
+    color: #333;
 }
 
 a {
@@ -122,7 +129,7 @@ a:active {
 .website__item {
     width: 24%;
     height: 10rem;
-    margin: 1rem;
+    margin-bottom: 1rem;
     border: 1px solid #f7f7f7;
     display: flex;
     justify-content: center;
@@ -155,6 +162,7 @@ a:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #f7f7f7;
     border-top: 1px solid #e5e5e5;
     border-left: 1px solid #e5e5e5;
     border-right: 1px solid #e5e5e5;

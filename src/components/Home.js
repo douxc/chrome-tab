@@ -4,7 +4,7 @@
  */
 import NavBar from './NavBar'; // 顶部导航条
 import Search from './Search'; // 搜索框
-import PopWebsites from './Popwebsites'; // 常用网址
+import PopWebsites from './popwebsites/Popwebsites'; // 常用网址
 import HistoryList from './HistoryList'; // 浏览历史
 export default {
     name: 'customerCom',

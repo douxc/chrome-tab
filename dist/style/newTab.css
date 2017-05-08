@@ -131,6 +131,7 @@ a:active {
     flex-wrap: wrap;
 }
 
+/*网址区块*/
 .website__item {
     width: 24%;
     height: 10rem;
@@ -145,11 +146,109 @@ a:active {
     word-break: break-all;
     overflow: hidden;
     transition: box-shadow 150ms ease-out;
+    cursor: pointer;
+}
+
+.website__item--add {
+    border: 2px dashed #A8A8A8;
+    color: #A8A8A8;
 }
 
 .website__item:hover {
     box-shadow: 0 0 1rem 2px rgba(0, 0, 0, 0.2);
     transition: box-shadow 150ms ease-out;
+}
+
+/*表单标题*/
+.add__header {
+    margin-top: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/*新增网址表单*/
+.add__form fieldset {
+    font-size: 14px;
+    border: none;
+    padding: 0;
+}
+
+/*输入*/
+.add__group {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.add__input {
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    box-shadow: none;
+    font-size: 14px;
+    flex: 1;
+}
+
+.add__input:focus,
+.add__input:active {
+    outline: none;
+}
+
+/*底部按钮*/
+.add__btn_group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.add__btn {
+    width: 25%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-image: none;
+    box-shadow: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.add__btn:active {
+    background-color: #d8d8d8;
+}
+
+.add__btn--confirm {
+    background-color: #4f9bff;
+    color: #fff;
+}
+
+.add__btn--confirm:active {
+    background-color: #3e8cff;
+}/*弹出框*/
+.dialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    display: none;
+}
+
+.dialog.open {
+    display: block;
+}
+
+/*弹窗区域*/
+.dialog__content {
+    max-width: 480px;
+    margin: 1rem auto;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 2px;
 }.history-container {
     padding: 1rem;
 }

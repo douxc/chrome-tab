@@ -1,16 +1,17 @@
 /*弹出框*/
 .dialog {
     position: fixed;
-    top: 0;
     right: 0;
     left: 0;
-    bottom: 0;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.25);
-    display: none;
+    top: -100%;
+    transition: top linear 150ms;
 }
 
 .dialog.open {
-    display: block;
+    top: 0%;
+    transition: top linear 150ms;
 }
 
 /*弹窗区域*/

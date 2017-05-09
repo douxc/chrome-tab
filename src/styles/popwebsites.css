@@ -4,12 +4,14 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 5rem;
 }
 
 /*网址区块*/
 .website__item {
     width: 24%;
     height: 10rem;
+    position: relative;
     margin-bottom: 1rem;
     border: 1px solid #f7f7f7;
     display: flex;
@@ -24,14 +26,46 @@
     cursor: pointer;
 }
 
-.website__item--add {
-    border: 2px dashed #A8A8A8;
-    color: #A8A8A8;
+/*删除*/
+.website__item > .website__item--delete {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    color: #333;
+}
+
+/*获取焦点时显示删除按钮*/
+.website__item:hover > .website__item--delete {
+    visibility: visible;
+}
+
+.website__item > .website__item--delete:hover,
+.website__item > .website__item--delete:active {
+    color: #ff2021;
+    transform: scale(1.2);
+    transition: transform linear;
 }
 
 .website__item:hover {
     box-shadow: 0 0 1rem 2px rgba(0, 0, 0, 0.2);
     transition: box-shadow 150ms ease-out;
+}
+
+/*新增*/
+.website__item--add {
+    border: 2px dashed #A8A8A8;
+    color: #A8A8A8;
+}
+
+.website__item--add.hide {
+    display: none;
 }
 
 /*表单标题*/

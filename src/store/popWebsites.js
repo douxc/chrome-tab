@@ -5,9 +5,18 @@
 const types = {
     KEY: 'SITES', // 保存到本地的key
     SET_SITES: 'SET_SITES',
-    ADD_SITES: 'ADD_SITES' // 添加网址
+    ADD_SITES: 'ADD_SITES', // 添加网址
+    DELETE_SITE: 'DELETE_SITE' // 删除网址
 };
-
+/**
+ * 保存state到本地
+ * @param sites
+ * @private
+ */
+function _saveToLocal(sites) {
+    // 将最新state保存到本地
+    window.localStorage.setItem(types.KEY, JSON.stringify(sites));
+}
 export default {
     state: {
         sites: []
@@ -23,16 +32,19 @@ export default {
                 commit(types.ADD_SITES, site);
                 resolve();
             });
+        },
+        // 删除网址
+        deleteSite({commit}, id) {
+            return new Promise((resolve) => {
+                commit(types.DELETE_SITE, id);
+                resolve();
+            });
         }
     },
     getters: {
         // 对本地网址进行处理
         sites(state) {
-            const sites = state.sites;
-            while (sites.length <= 0) {
-                sites.push({title: '', url: ''});
-            }
-            return sites;
+            return state.sites;
         }
     },
     mutations: {
@@ -42,9 +54,16 @@ export default {
         },
         // 添加网址
         [types.ADD_SITES](state, site) {
-            state.sites.push(site);
-            // 将最新state保存到本地
-            window.localStorage.setItem(types.KEY, JSON.stringify(state.sites));
+            site.id = new Date().valueOf();
+            state.sites.unshift(site);
+            _saveToLocal(state.sites);
+        },
+        // 删除网址
+        [types.DELETE_SITE](state, id) {
+            state.sites = state.sites.filter(site => {
+                return site.id.toString() !== id;
+            });
+            _saveToLocal(state.sites);
         }
     }
 }

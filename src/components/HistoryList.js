@@ -24,7 +24,7 @@ export default {
                             <a class="history_item__url text-ellipsis" href={history.url} title={history.title}>
                                 {history.url}
                             </a>
-                            <a title="delete" data-url={history.url} class="history_item__delete">&times;</a>
+                            <a title="删除" data-url={history.url} class="history_item__delete">&times;</a>
                         </li>;
                     })}
                 </ul>

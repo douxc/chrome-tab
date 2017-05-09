@@ -185,7 +185,7 @@ a:active {
 
 /*新增*/
 .website__item--add {
-    border: 2px dashed #A8A8A8;
+    border: 2px dashed #c8c8c8;
     color: #A8A8A8;
 }
 
@@ -343,6 +343,16 @@ a:active {
     text-align: center;
     line-height: 1.5rem;
     cursor: pointer;
+}
+
+/*所有的删除在获取焦点时颜色变为红色*/
+.history_item__delete:hover,
+.history_item__delete:active,
+.footer__deleteAll:hover,
+.footer__deleteAll:active {
+    color: #ff2021;
+    transform: scale(1.2);
+    transition: transform linear;
 }
 
 /*列表底部*/

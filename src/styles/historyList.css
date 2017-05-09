@@ -59,6 +59,16 @@
     cursor: pointer;
 }
 
+/*所有的删除在获取焦点时颜色变为红色*/
+.history_item__delete:hover,
+.history_item__delete:active,
+.footer__deleteAll:hover,
+.footer__deleteAll:active {
+    color: #ff2021;
+    transform: scale(1.2);
+    transition: transform linear;
+}
+
 /*列表底部*/
 .footer {
     display: flex;

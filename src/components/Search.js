@@ -32,7 +32,7 @@ export default {
     render(h) {
         const _this = this;
         return <div class="search">
-            <input id="search" class="search__input" type="text" placeholder="search" value={_this.inputVal}
+            <input id="search" class="search__input" type="text" placeholder="必应搜索" value={_this.inputVal}
                    autocomplete="off"
                    onInput={(e) => {
                        _this.inputStr = e.target.value;

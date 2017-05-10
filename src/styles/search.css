@@ -1,6 +1,11 @@
-.search {
+/*搜索容器*/
+.search__container {
     width: 35rem;
     margin: 10rem auto;
+}
+
+/*搜索*/
+.search {
     height: 3rem;
     display: flex;
     justify-content: center;
@@ -56,4 +61,13 @@
 
 .search__icon:active {
     background-color: #3e8cff;
+}
+
+/*搜索到的结果*/
+.search__result {
+    margin: 0;
+}
+
+.search__result > li {
+    list-style: none;
 }

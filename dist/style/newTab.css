@@ -64,9 +64,14 @@ a:active {
     top: 0;
     left: 0;
     z-index: 9999;
-}.search {
+}/*搜索容器*/
+.search__container {
     width: 35rem;
     margin: 10rem auto;
+}
+
+/*搜索*/
+.search {
     height: 3rem;
     display: flex;
     justify-content: center;
@@ -123,7 +128,15 @@ a:active {
 .search__icon:active {
     background-color: #3e8cff;
 }
-.website {
+
+/*搜索到的结果*/
+.search__result {
+    margin: 0;
+}
+
+.search__result > li {
+    list-style: none;
+}.website {
     width: 100%;
     display: flex;
     justify-content: space-around;

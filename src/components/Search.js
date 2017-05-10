@@ -31,13 +31,19 @@ export default {
     },
     render(h) {
         const _this = this;
-        return <div class="search">
-            <input id="search" class="search__input" type="text" placeholder="必应搜索" value={_this.inputVal}
-                   autocomplete="off"
-                   onInput={(e) => {
-                       _this.inputStr = e.target.value;
-                   }}/>
-            <div id="searchBtn" class="search__icon"></div>
+        return <div class="search__container">
+            <div class="search">
+                <input id="search" class="search__input" type="text" placeholder="必应搜索" value={_this.inputVal}
+                       autocomplete="off"
+                       onInput={(e) => {
+                           _this.inputStr = e.target.value;
+                       }}/>
+                <div id="searchBtn" class="search__icon"></div>
+            </div>
+            {/*搜索建议*/}
+            {/*<ul class="search__result">*/}
+            {/*<li></li>*/}
+            {/*</ul>*/}
         </div>;
     },
     mounted() {

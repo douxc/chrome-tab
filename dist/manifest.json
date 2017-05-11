@@ -8,7 +8,8 @@
     "http://*/*",
     "https://*/*",
     "webRequest",
-    "history"
+    "history",
+    "management"
   ],
   "requirements": {
     "3D": {

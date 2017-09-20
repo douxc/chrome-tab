@@ -10,7 +10,11 @@
         </template>
       </el-table-column>
       <el-table-column label="地址">
-        <template scope="scope"><a :title="scope.row.title" :href="scope.row.url">{{scope.row.url}}</a></template>
+        <template scope="scope">
+          <a :title="scope.row.title" :href="scope.row.url">
+            <p class="douxc-history-url">{{scope.row.url}}</p>
+          </a>
+        </template>
       </el-table-column>
       <el-table-column label="操作" align="center" headerAlign="center" width="78px">
         <template scope="scope">
@@ -58,7 +62,7 @@
   }
 
   /*标题*/
-  .douxc-history-title {
+  .douxc-history-title, .douxc-history-url {
     overflow: hidden;
     text-overflow: ellipsis;
     word-break: normal;

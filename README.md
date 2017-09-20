@@ -1,14 +1,21 @@
 # chrome-tab
 
-chrome扩展，自定义新打开的标签页
+> chrome tab
 
-## TODO
+## Build Setup
 
-0. <s>管理最近浏览记录</s>
-0. <s>设置常用网址</s>
-0. 统计常用网站使用次数
+``` bash
+# install dependencies
+npm install
 
+# serve with hot reload at localhost:8080
+npm run dev
 
-## 截图
+# build for production with minification
+npm run build
 
-![capture](./capture/capture.png)
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
